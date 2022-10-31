@@ -1,7 +1,7 @@
-# FROM ubuntu:20.04
+FROM ubuntu:20.04
 USER root
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update 
+RUN apt-get update && apt-get wget
 FROM litespeedtech/openlitespeed:1.7.16-lsphp74
 WORKDIR /usr/bin
 # RUN apt-get install lsphp74-apcu lsphp74-curl lsphp74-imagick lsphp74-json lsphp74-memcached lsphp74-mysql lsphp74-pear lsphp74-pspell lsphp74-redis -y
